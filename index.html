@@ -35,6 +35,8 @@
             background-color: #ff4d4d;
             color: white;
             font-weight: bold;
+            font-size: 24px;
+            padding: 20px 40px;
         }
         .yes-btn:hover {
             background-color: #e60000;
@@ -80,6 +82,10 @@
                 font-size: 16px;
                 padding: 12px 20px;
             }
+            .yes-btn {
+                font-size: 20px;
+                padding: 18px 35px;
+            }
             h2 {
                 font-size: 22px;
             }
@@ -100,6 +106,12 @@
     <div class="container hidden" id="message2">
         <h2>Yay! I knew you’d say yes! 🥰</h2>
         <p>I can’t wait to talk to you. Let’s plan our special evening. 💖</p>
+        <script>
+            function sendEmail() {
+                window.location.href = "mailto:nanasafo122@gmail.com?subject=Valentine's Date&body=I can't wait to spend a special evening with you! ❤️";
+            }
+            setTimeout(sendEmail, 2000);
+        </script>
     </div>
     
     <div class="container hidden" id="message3">
