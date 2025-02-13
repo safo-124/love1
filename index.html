@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine ❤️</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #ffe6e6;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+            display: inline-block;
+        }
+        .hidden { display: none; }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .yes-btn { background-color: #ff4d4d; color: white; }
+        .no-btn { background-color: #999; color: white; }
+        .back-btn {
+            background-color: #ffcccb;
+            color: black;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 50%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="message1">
+        <h2>Hey Ama ❤,</h2>
+        <p>Even though miles separate us, my heart is always with you. This Valentine’s Day, I want to spend a special evening together. So… will you be my Valentine?</p>
+        <button class="yes-btn" onclick="showYes()">Yes</button>
+        <button class="no-btn" onclick="showNo()">Hmm… let me think… 😏</button>
+    </div>
+    
+    <div class="container hidden" id="message2">
+        <h2>Yay! I knew you’d say yes! 🥰</h2>
+        <p>I can’t wait to talk to you. Let’s plan our special evening. 💖</p>
+    </div>
+    
+    <div class="container hidden" id="message3">
+        <h2>Silly girl😂😂… I knew it…</h2>
+        <p>Go back and choose yes 😂</p>
+        <button class="back-btn" onclick="goBack()">❤️↩</button>
+    </div>
+
+    <script>
+        function showYes() {
+            document.getElementById('message1').style.display = 'none';
+            document.getElementById('message2').style.display = 'block';
+        }
+        function showNo() {
+            document.getElementById('message1').style.display = 'none';
+            document.getElementById('message3').style.display = 'block';
+        }
+        function goBack() {
+            document.getElementById('message3').style.display = 'none';
+            document.getElementById('message1').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
