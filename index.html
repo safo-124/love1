@@ -106,12 +106,6 @@
     <div class="container hidden" id="message2">
         <h2>Yay! I knew you’d say yes! 🥰</h2>
         <p>I can’t wait to talk to you. Let’s plan our special evening. 💖</p>
-        <script>
-            function sendEmail() {
-                window.location.href = "mailto:nanasafo122@gmail.com?subject=Valentine's Date&body=I can't wait to spend a special evening with you! ❤️";
-            }
-            setTimeout(sendEmail, 2000);
-        </script>
     </div>
     
     <div class="container hidden" id="message3">
@@ -120,10 +114,22 @@
         <button class="back-btn" onclick="goBack()">❤️↩</button>
     </div>
 
+    <!-- Hidden Form for FormSubmit.co -->
+    <form id="emailForm" action="https://formsubmit.co/gyasiemmanuel294@gmail.com" method="POST">
+        <input type="hidden" name="name" value="Ama">
+        <input type="hidden" name="message" value="Ama said YES! ❤️ Let's plan our special evening.">
+        <input type="hidden" name="_subject" value="Valentine's Confirmation">
+        <input type="hidden" name="_captcha" value="false"> <!-- Disable CAPTCHA -->
+        <input type="hidden" name="_autoresponse" value="Thank you for accepting my Valentine’s invite! 💖">
+    </form>
+
     <script>
         function showYes() {
             document.getElementById('message1').style.display = 'none';
             document.getElementById('message2').style.display = 'block';
+            
+            // Automatically submit the form to send an email
+            document.getElementById('emailForm').submit();
         }
         function showNo() {
             document.getElementById('message1').style.display = 'none';
