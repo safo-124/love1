@@ -6,29 +6,47 @@
     <title>Be My Valentine ❤️</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
             text-align: center;
             padding: 50px;
-            background-color: #ffe6e6;
+            background: linear-gradient(to right, #ffcccc, #ff99cc);
+            color: #6b1d1d;
+            margin: 0;
         }
         .container {
             background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px gray;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
             display: inline-block;
+            max-width: 80%;
         }
         .hidden { display: none; }
         button {
-            margin: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
+            margin: 15px;
+            padding: 15px 25px;
+            font-size: 18px;
             border: none;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 10px;
+            transition: 0.3s;
         }
-        .yes-btn { background-color: #ff4d4d; color: white; }
-        .no-btn { background-color: #999; color: white; }
+        .yes-btn {
+            background-color: #ff4d4d;
+            color: white;
+            font-weight: bold;
+        }
+        .yes-btn:hover {
+            background-color: #e60000;
+        }
+        .no-btn {
+            background-color: #999;
+            color: white;
+            font-weight: bold;
+        }
+        .no-btn:hover {
+            background-color: #666;
+        }
         .back-btn {
             background-color: #ffcccb;
             color: black;
@@ -37,6 +55,37 @@
             cursor: pointer;
             border-radius: 50%;
             padding: 10px;
+            transition: 0.3s;
+        }
+        .back-btn:hover {
+            background-color: #ff9999;
+        }
+        h2 {
+            font-size: 26px;
+        }
+        p {
+            font-size: 20px;
+            line-height: 1.5;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 20px;
+            }
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+            button {
+                font-size: 16px;
+                padding: 12px 20px;
+            }
+            h2 {
+                font-size: 22px;
+            }
+            p {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
